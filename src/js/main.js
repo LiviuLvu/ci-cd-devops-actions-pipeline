@@ -33,7 +33,7 @@ function displayVictoryMess (moves) {
 }
 
 function toggleVisablity (id) {
-  if (document.getElementById(id).style.visibility == 'visible') {
+  if (document.getElementById(id).style.visibility === 'visible') {
     document.getElementById(id).style.visibility = 'hidden'
   } else {
     document.getElementById(id).style.visibility = 'visible'
@@ -150,7 +150,7 @@ function Maze (Width, Height) {
         //  move the current position back to the prior cell and Recall the method.
         pos = mazeMap[pos.x][pos.y].priorPos
       }
-      if (numCells == cellsVisited) {
+      if (numCells === cellsVisited) {
         isComp = true
       }
     }
@@ -241,7 +241,7 @@ function DrawMaze (Maze, ctx, cellsize, endSprite = null) {
       ctx.lineTo(x + cellSize, y + cellSize)
       ctx.stroke()
     }
-    if (cell.w == false) {
+    if (cell.w === false) {
       ctx.beginPath()
       ctx.moveTo(x, y)
       ctx.lineTo(x, y + cellSize)
