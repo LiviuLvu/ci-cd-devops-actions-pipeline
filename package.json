@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npx parcel build src/index.html --public-url github.com/LiviuLvu/ci-cd-devops-actions-pipeline",
     "lint": "npx eslint src/.",
+    "lint-fix": "npx eslint src/js --fix",
     "test": "npx jest",
     "deploy": "npm run build && npx gh-pages -d dist",
     "ci": "npm run lint && npm run test && npm run deploy"
