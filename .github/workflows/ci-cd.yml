@@ -43,5 +43,10 @@ jobs:
     - name: Install dependencies
       run: npx ci
 
+    - name: Setup Git user and email
+      run: |
+        git config --global user.email "${{ secret.USER }}"
+        git config --global user.name "${{ secret.NAME }}"
+
     - name: Deploy to GitHub Pages
       run: npm run deploy
