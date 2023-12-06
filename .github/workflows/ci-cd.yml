@@ -44,9 +44,7 @@ jobs:
       run: npx ci
 
     - name: Setup Git user and email
-      run: |
-        git config --global user.email "${{ secrets.USER }}"
-        git config --global user.name "${{ secrets.NAME }}"
-        git remote set-url origin https://x-access-token:${{ secrets.TEMPORARY_TOKEN }}@github.com/LiviuLvu/ci-cd-devops-actions-pipeline
+      run: git remote set-url origin https://x-access-token:${{ secrets.TEMPORARY_TOKEN }}@github.com/LiviuLvu/ci-cd-devops-actions-pipeline
+
     - name: Deploy to GitHub Pages
       run: npm run deploy
